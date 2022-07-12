@@ -24,7 +24,7 @@ router.get("/", async (req, res) => {
   const condition = {};
   const where = {};
   if (race) where.race = race;
-  if (age) where.race = age;
+  if (age) where.age =age;
   if (where) condition.where = where;
   const characters = await Character.findAll(condition);
   res.json(characters);
